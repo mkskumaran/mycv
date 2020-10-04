@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="My Resume Curriculum Vitae Work Experience"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/a192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Curriculum Vitae - MSK</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+	</div>
+  </body>
+<script>
+	var deferredPrompt;
+	var div = document.getElementById("add-to");
+	div.style.display = "none";
+	window.addEventListener('beforeinstallprompt', function (e) { 
+		e.preventDefault();
+		deferredPrompt = e; 
+		// hide our user interface that shows our A2HS button
+		div.style.display = 'block'; 		
+		showAddToHomeScreen(); 
+	});
+
+	function showAddToHomeScreen() { 
+		var button = document.querySelector(".add-to-btn");
+		button.addEventListener("click", addToHomeScreen); 
+	} 
+	
+	function addToHomeScreen() { 
+		var button = document.querySelector(".add-to-btn"); 
+		var div = document.getElementById("add-to");
+		div.style.display = 'none'; 		
+		// Show the prompt 
+		deferredPrompt.prompt(); // Wait for the user to respond to the prompt 
+		deferredPrompt.userChoice .then(function(choiceResult){ 
+		if (choiceResult.outcome === 'accepted') { 
+			console.log('User accepted the A2HS prompt'); 
+		} else { 
+			console.log('User dismissed the A2HS prompt'); 
+		} 
+		deferredPrompt = null; }); 
+	}
+  </script>	  
+</html>
