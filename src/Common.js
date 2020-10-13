@@ -50,7 +50,7 @@ function Common(props){
 				work_experiences.map(work_experience => work_experience.ispresent === true ? 
 				( 
 					<span className="current" key={work_experience.id}>
-						<b><i><span style={{listStyleType: "none",backgroundColor:"#04671B"}} className="list-group-item text-white">{loading ? <Skeleton circle={true} height={20} width={20}/> : <i className="fa fa-check-circle" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton count={2}/> : <span> {work_experience.organization} , {work_experience.position} , {work_experience.from}</span>}
+						<b><i><span style={{listStyleType: "none",backgroundColor:"#084908"}} className="list-group-item text-white">{loading ? <Skeleton circle={true} height={20} width={20}/> : <i className="fa fa-check-circle" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton count={2}/> : <span> {work_experience.organization} , {work_experience.position} , {work_experience.from}</span>}
 						</span></i></b>
 					</span>
 				) : 
