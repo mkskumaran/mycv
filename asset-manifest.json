@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/mycv/static/css/main.f153dc39.chunk.css",
-    "main.js": "/mycv/static/js/main.015a070a.chunk.js",
-    "main.js.map": "/mycv/static/js/main.015a070a.chunk.js.map",
+    "main.css": "/mycv/static/css/main.a3ab881c.chunk.css",
+    "main.js": "/mycv/static/js/main.75104ed6.chunk.js",
+    "main.js.map": "/mycv/static/js/main.75104ed6.chunk.js.map",
     "runtime-main.js": "/mycv/static/js/runtime-main.f7b5f11b.js",
     "runtime-main.js.map": "/mycv/static/js/runtime-main.f7b5f11b.js.map",
     "static/css/2.a286b187.chunk.css": "/mycv/static/css/2.a286b187.chunk.css",
-    "static/js/2.54d39995.chunk.js": "/mycv/static/js/2.54d39995.chunk.js",
-    "static/js/2.54d39995.chunk.js.map": "/mycv/static/js/2.54d39995.chunk.js.map",
+    "static/js/2.d78e585f.chunk.js": "/mycv/static/js/2.d78e585f.chunk.js",
+    "static/js/2.d78e585f.chunk.js.map": "/mycv/static/js/2.d78e585f.chunk.js.map",
     "index.html": "/mycv/index.html",
-    "precache-manifest.12bc74b85e81e73b59b6e61eec670f1d.js": "/mycv/precache-manifest.12bc74b85e81e73b59b6e61eec670f1d.js",
+    "precache-manifest.43618c343b4e8a9891458e756204a155.js": "/mycv/precache-manifest.43618c343b4e8a9891458e756204a155.js",
     "service-worker.js": "/mycv/service-worker.js",
     "static/css/2.a286b187.chunk.css.map": "/mycv/static/css/2.a286b187.chunk.css.map",
-    "static/css/main.f153dc39.chunk.css.map": "/mycv/static/css/main.f153dc39.chunk.css.map",
-    "static/js/2.54d39995.chunk.js.LICENSE.txt": "/mycv/static/js/2.54d39995.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.css": "/mycv/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/me.png": "/mycv/static/media/me.59e85178.png"
+    "static/css/main.a3ab881c.chunk.css.map": "/mycv/static/css/main.a3ab881c.chunk.css.map",
+    "static/js/2.d78e585f.chunk.js.LICENSE.txt": "/mycv/static/js/2.d78e585f.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/mycv/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.f7b5f11b.js",
     "static/css/2.a286b187.chunk.css",
-    "static/js/2.54d39995.chunk.js",
-    "static/css/main.f153dc39.chunk.css",
-    "static/js/main.015a070a.chunk.js"
+    "static/js/2.d78e585f.chunk.js",
+    "static/css/main.a3ab881c.chunk.css",
+    "static/js/main.75104ed6.chunk.js"
   ]
 }
