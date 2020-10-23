@@ -29,25 +29,12 @@ class App extends React.Component{
 	
 
 	render() {
-		const label = this.state.label;
-		const skill = this.state.skill;
-		const skill_label = this.state.skill_label;
-		const work_experience = this.state.work_experience;
-		const data_letters = this.state.data_letters;
-		const education = this.state.education;
-		const education_label = this.state.education_label;
-		const personal_information = this.state.personal_information;
-		const personal_information_label = this.state.personal_information_label;	
-		const projects = this.state.projects;
-		const projects_label = this.state.projects_label;
-		const certification = this.state.certification;
-		const certification_label = this.state.certification_label;	
-		const declaration = this.state.declaration;
-		const declaration_label = this.state.declaration_label;		
-		const social_links = this.state.social_links;	
 		const loading = this.state.loading;
 		const d = new Date();
-		
+		const cv_data = this.state;
+		const data_letters = cv_data.data_letters;
+		const social_links = cv_data.social_links;	
+		const declaration = this.state.declaration;
 		const dd = String(d.getDate()).padStart(2, '0');
 		const mm = String(d.getMonth() + 1).padStart(2, '0'); //January is 0!
 		const n = d.getFullYear();	
@@ -82,7 +69,7 @@ class App extends React.Component{
 					<div>
 						<div className="row">
 						  <div className="col-12">
-							<Common label={label} skill_label={skill_label} work_experience={work_experience} skill={skill} education={education} education_label={education_label} personal_information={personal_information} personal_information_label={personal_information_label} projects_label={projects_label} projects={projects} certification_label={certification_label} certification={certification} today={today} declaration={declaration} declaration_label={declaration_label} loading={loading}/>
+							<Common cv_data={cv_data} today={today}/>
 						  </div>
 						</div>
 					</div>

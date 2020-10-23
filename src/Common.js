@@ -2,19 +2,20 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
 function Common(props){
-	const work_experiences = props.work_experience;
-	const skills = props.skill;
-	const educations = props.education;
-	const personal_informations = props.personal_information;
-	const projects = props.projects;
-	const certifications = props.certification;
-	const declarations = props.declaration;
-	const loading = props.loading;
+	const cv_data = props.cv_data;
+	const work_experiences = cv_data.work_experience;
+	const skills = cv_data.skill;
+	const educations = cv_data.education;
+	const personal_informations = cv_data.personal_information;
+	const projects = cv_data.projects;
+	const certifications = cv_data.certification;
+	const declarations = cv_data.declaration;
+	const loading = cv_data.loading;
 	console.log(educations);
 	return(
 		<div className="card">
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-briefcase" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.skill_label}</i> }
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-briefcase" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.skill_label}</i> }
 			</div>
 			<span>
 			<div  className="list-group-item list-group-item-action" > 
@@ -29,7 +30,7 @@ function Common(props){
 			</div>
 			</span>	
 			<div className="card-header  mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-graduation-cap" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.education_label}</i> }				
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-graduation-cap" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.education_label}</i> }				
 			</div>	
 			{
 				<div className="list-group">
@@ -44,7 +45,7 @@ function Common(props){
 				</div>	
 			}
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-briefcase" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.label}</i> }					
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-briefcase" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.label}</i> }					
 			</div>	
 			{
 				work_experiences.map(work_experience => work_experience.ispresent === true ? 
@@ -61,7 +62,7 @@ function Common(props){
 				))
 			}
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-info-circle" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.personal_information_label}</i> }					
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-info-circle" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.personal_information_label}</i> }					
 			</div>	
 			
 				<div> 			
@@ -81,7 +82,7 @@ function Common(props){
 				</div>
 					
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-certificate" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.certification_label}</i> }	
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-certificate" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.certification_label}</i> }	
 			</div>	
 			{certifications.map((certification, index) => (
 				<span className="certification list-group-item list-group-item-action" key={index}>
@@ -89,7 +90,7 @@ function Common(props){
 				</span>	
 			))}	
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-hand-o-right" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.projects_label}</i> }				
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-hand-o-right" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.projects_label}</i> }				
 			</div>			
 			<div className="list-group">
 				{projects.map((project, index) => (
@@ -103,7 +104,7 @@ function Common(props){
 				))}			
 			</div>				
 			<div className="card-header mt-3 bg_own">
-				{loading ? <Skeleton width={20}/> : <i className="fa fa-pencil-square" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{props.declaration_label}</i> }					
+				{loading ? <Skeleton width={20}/> : <i className="fa fa-pencil-square" style={{fontSize:'14px'}}></i>} {loading ? <Skeleton width={100}/> : <i>{cv_data.declaration_label}</i> }					
 			</div>	
 			{declarations.map((declaration, index) => (
 				<span className="list-group-item list-group-item-action" key={index}>
